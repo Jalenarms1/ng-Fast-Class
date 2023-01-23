@@ -1,0 +1,10 @@
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.8s ease;
+}
+
+.all {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://static.vecteezy.com/system/resources/previews/002/241/373/original/stationery-frame-for-school-theme-design-vector.jpg);
+   
+}
