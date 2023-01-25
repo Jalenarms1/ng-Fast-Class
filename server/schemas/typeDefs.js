@@ -15,6 +15,8 @@ let typeDefs = gql`
     subject: String
     courseName: String
     open: Boolean
+    teacher: User
+    students: [User]
   }
 
   type TestGet {

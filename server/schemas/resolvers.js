@@ -107,14 +107,17 @@ let resolvers = {
       }
     },
     addClass: async (parent, {subject, courseName}, ctx) => {
+      console.log(ctx);
+ 
       try {
         const newClass = await Classroom.create({
           subject,
           courseName,
-          open: true
+          open: true,
+          teacher: ctx.user._id
         })
 
-        return newClass
+        return newClass.populate('teacher')
       } catch (error) {
         console.log(error);
         return error

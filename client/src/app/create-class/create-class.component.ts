@@ -21,7 +21,6 @@ export class CreateClassComponent implements OnInit {
   }
 
   submitClass() {
-    console.log({...this.classroom})
     this.apollo.mutate({
       mutation: ADD_CLASS,
       variables: {
@@ -34,8 +33,6 @@ export class CreateClassComponent implements OnInit {
     })
 
     this.clearForm()
-
-
   }
 
   clearForm() {
@@ -44,5 +41,4 @@ export class CreateClassComponent implements OnInit {
 
     this.router.navigate([this.router.url])
   }
-
 }

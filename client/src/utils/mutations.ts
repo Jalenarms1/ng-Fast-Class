@@ -35,6 +35,17 @@ export const ADD_CLASS = gql`
             _id
             subject
             courseName
+            open
+            teacher {
+                _id
+                username
+                email
+            }
+            students {
+                _id
+                username
+                email
+            }
         }
     }
 `
