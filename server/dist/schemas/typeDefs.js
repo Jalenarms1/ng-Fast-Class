@@ -1,6 +1,6 @@
+"use strict";
 const { gql } = require("apollo-server-express");
-
-let typeDefs = gql`
+let typeDefs = gql `
   
   type User {
     _id: ID
@@ -8,13 +8,6 @@ let typeDefs = gql`
     email: String
     
     
-  }
-
-  type Classroom {
-    _id: ID
-    subject: String
-    courseName: String
-    open: Boolean
   }
 
   type TestGet {
@@ -40,9 +33,7 @@ let typeDefs = gql`
     updateUser(username: String!, email: String!, password: String): User
     deleteUser(_id: ID!): User
     login(username: String!, password: String!): Auth
-    addClass(subject: String!, courseName: String!): Classroom
     
   }
 `;
-
 module.exports = typeDefs;

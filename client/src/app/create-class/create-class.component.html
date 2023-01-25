@@ -1,0 +1,30 @@
+<div class="bg-zinc-800 text-white">
+    <app-dashboard-header></app-dashboard-header>
+    <main class="px-4">
+        <div class="container mx-auto mt-4 w-[60%] shadow-md shadow-zinc-500 rounded-lg">
+            <form class="bg-white p-4 rounded-lg shadow-md">
+                <h1 class="text-3xl text-gray-800 font-medium mb-5">Create Classroom</h1>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" for="subject">
+                    Subject
+                    </label>
+                    <input [(ngModel)]="classroom.subject" class="border rounded w-full py-2 px-3 text-gray-700" type="text" id="subject" name="subject" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2" for="courseName">
+                    Course Name
+                    </label>
+                    <input [(ngModel)]="classroom.courseName" class="border rounded w-full py-2 px-3 text-gray-700" type="text" id="courseName" name="courseName" required>
+                </div>
+                <button (click)="submitClass()" class="bg-zinc-800 text-white rounded-lg py-2 px-4 hover:bg-zinc-900">Create</button>
+            </form>
+        </div>
+        <app-dashboard-cards></app-dashboard-cards>
+        <div class="pb-20">
+            <app-dashboard-report></app-dashboard-report>
+
+        </div>
+    </main>
+            
+</div>
+

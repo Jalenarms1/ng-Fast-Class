@@ -3,6 +3,7 @@ import Auth from 'src/utils/auth';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,12 +11,16 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    
+  }
 
   ngOnInit(): void {
     if(!Auth.loggedIn()) {
       this.router.navigate([''])
     }
   }
+
+  
 
 }

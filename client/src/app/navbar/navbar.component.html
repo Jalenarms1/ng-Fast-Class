@@ -7,7 +7,7 @@
        
     </a>
     <div class="flex items-center">
-      <a routerLink="/login" class="px-3 py-2 text-sm font-medium text-gray-100 hover:text-gray-300">Features</a>
+      <a routerLink="/create-class" class="px-3 py-2 text-sm font-medium text-gray-100 hover:text-gray-300">Features</a>
       <a href="#" class="px-3 py-2 text-sm font-medium text-gray-100 hover:text-gray-300">Contact</a>
       <a *ngIf="!loggedIn" routerLink="/login" class="px-3 py-2 text-sm font-medium text-gray-100 hover:text-gray-300">Login</a>
       <button *ngIf="loggedIn" (click)="logout()" class="px-3 py-2 text-sm font-medium text-gray-100 hover:text-gray-300">Logout</button>

@@ -28,3 +28,13 @@ export const LOGIN_USER = gql`
         }
     }
 `
+
+export const ADD_CLASS = gql`
+    mutation addClass($subject: String!, $courseName: String!) {
+        addClass(subject: $subject, courseName: $courseName) {
+            _id
+            subject
+            courseName
+        }
+    }
+`

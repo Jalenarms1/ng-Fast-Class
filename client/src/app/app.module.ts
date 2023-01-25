@@ -17,6 +17,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular'
 import { HttpLink } from 'apollo-angular/http'
 import { InMemoryCache } from '@apollo/client/core'
+import { CreateClassComponent } from './create-class/create-class.component';
+import { RouterModule } from '@angular/router';
+import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardMainComponent } from './dashboard-main/dashboard-main.component';
+import { DashboardCardsComponent } from './dashboard-cards/dashboard-cards.component';
+import { DashboardReportComponent } from './dashboard-report/dashboard-report.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +36,12 @@ import { InMemoryCache } from '@apollo/client/core'
     DemoPathComponent,
     LandingComponent,
     LoginComponent,
+    CreateClassComponent,
+    DashboardComponent,
+    DashboardHeaderComponent,
+    DashboardMainComponent,
+    DashboardCardsComponent,
+    DashboardReportComponent
     
   ],
   imports: [
@@ -36,7 +49,9 @@ import { InMemoryCache } from '@apollo/client/core'
     AppRoutingModule,
     FormsModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

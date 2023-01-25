@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
-const {User} = require('../models')
+const {User, Classroom} = require('../models')
 
 const cloudinary = require("cloudinary").v2;
 
@@ -18,7 +18,7 @@ const options = {
 };
 
 
-const resolvers = {
+let resolvers = {
   Query: {
     testGet: () => {
       console.log('got')
@@ -94,7 +94,6 @@ const resolvers = {
         let removedUser = await User.findByIdAndDelete(args._id);
         console.log(removedUser);
 
-        let removedShop = await Business.findOneAndDelete({userId: removedUser._id})
 
         //remove products that belong to that business
         // let removedProducts = await Product.deleteMany({userId: removedUser._id})
@@ -107,6 +106,20 @@ const resolvers = {
         return error
       }
     },
+    addClass: async (parent, {subject, courseName}, ctx) => {
+      try {
+        const newClass = await Classroom.create({
+          subject,
+          courseName,
+          open: true
+        })
+
+        return newClass
+      } catch (error) {
+        console.log(error);
+        return error
+      }
+    }
     
   }
 };
