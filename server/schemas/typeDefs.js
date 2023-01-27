@@ -6,8 +6,6 @@ let typeDefs = gql`
     _id: ID
     username: String
     email: String
-    
-    
   }
 
   type Classroom {
@@ -17,6 +15,8 @@ let typeDefs = gql`
     open: Boolean
     teacher: User
     students: [User]
+    getStudentCount: Int
+    
   }
 
   type TestGet {
@@ -33,6 +33,7 @@ let typeDefs = gql`
   type Query {
     
     user: User
+    getMyClasses: [Classroom]
     
     testGet: TestGet
   }
@@ -42,7 +43,7 @@ let typeDefs = gql`
     updateUser(username: String!, email: String!, password: String): User
     deleteUser(_id: ID!): User
     login(username: String!, password: String!): Auth
-    addClass(subject: String!, courseName: String!): Classroom
+    addClass(subject: String!, courseName: String!): [Classroom]
     
   }
 `;

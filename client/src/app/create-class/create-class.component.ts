@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Apollo } from 'apollo-angular';
 import { ADD_CLASS } from 'src/utils/mutations';
+import { MY_CLASSES } from 'src/utils/queries';
+import { ClassroomsService } from '../classrooms.service';
+import { DashboardReportComponent } from '../dashboard-report/dashboard-report.component';
+
 
 @Component({
   selector: 'app-create-class',
@@ -14,7 +18,11 @@ export class CreateClassComponent implements OnInit {
     courseName: ''
   }
 
-  constructor(private apollo: Apollo, private router: Router) { }
+  constructor(private apollo: Apollo, private router: Router, private classService: ClassroomsService) { 
+  
+  }
+
+  
 
   ngOnInit(): void {
     
@@ -27,18 +35,18 @@ export class CreateClassComponent implements OnInit {
         ...this.classroom
       }
     })
-    .subscribe(({data}) => {
-      console.log(data);
+    .subscribe((data: any) => {
+      location.reload()
       
     })
+    // this.clearForm()
 
-    this.clearForm()
   }
 
-  clearForm() {
-    this.classroom.subject = ''
-    this.classroom.courseName = ''
+  // clearForm() {
+  //   this.classroom.subject = ''
+  //   this.classroom.courseName = ''
 
-    this.router.navigate([this.router.url])
-  }
+  //   this.router.navigate([this.router.url])
+  // }
 }

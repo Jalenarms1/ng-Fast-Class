@@ -36,7 +36,18 @@ const classroomSchema = new Schema({
 
   
   
+},
+{
+  toJSON: {
+    virtuals: true,
+    
+  },
+  id: false
 });
+
+classroomSchema.virtual('getStudentCount').get(function () {
+  return this.students.length
+})
 
 const Classroom = mongoose.model('Classroom', classroomSchema);
 

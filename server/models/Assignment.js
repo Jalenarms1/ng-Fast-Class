@@ -8,10 +8,10 @@ const assignmentSchema = new Schema({
     required: true,
     trim: true
   },
-  courseName: {
+  description: {
     type: String,
     required: true,
-    
+    trim: true
   },
   classroom: {
     type: Schema.Types.ObjectId, 

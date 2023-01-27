@@ -24,6 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardMainComponent } from './dashboard-main/dashboard-main.component';
 import { DashboardCardsComponent } from './dashboard-cards/dashboard-cards.component';
 import { DashboardReportComponent } from './dashboard-report/dashboard-report.component';
+import { AddAssignmentComponent } from './add-assignment/add-assignment.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { DashboardReportComponent } from './dashboard-report/dashboard-report.co
     DashboardHeaderComponent,
     DashboardMainComponent,
     DashboardCardsComponent,
-    DashboardReportComponent
+    DashboardReportComponent,
+    AddAssignmentComponent
     
   ],
   imports: [

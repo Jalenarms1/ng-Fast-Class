@@ -7,3 +7,15 @@ export const TEST_GET = gql`
         }
     }
 `
+
+export const MY_CLASSES = gql`
+    query getMyClasses {
+        getMyClasses {
+            subject
+            courseName
+            open
+            getStudentCount
+            
+        }
+    }
+`

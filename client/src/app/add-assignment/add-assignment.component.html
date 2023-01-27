@@ -1,0 +1,41 @@
+<div class="bg-zinc-800 text-white">
+    <app-dashboard-header></app-dashboard-header>
+    <main class="px-4">
+        <div class="bg-zinc-100 rounded-lg p-4 text-white my-2 w-[75%] mx-auto">
+            <div class="flex justify-between w-full">
+              <h2 class="text-3xl font-medium text-slate-900">Create Assignment</h2>
+              <div class="relative w-[30%]">
+                <select class="appearance-none w-[100%] shadow-sm shadow-zinc-900 rounded-md cursor-pointer bg-zinc-300 text-black p-2 focus:outline-none focus:shadow-outline-zinc-700">
+                  <option>Select Classroom</option>
+                  <option>Classroom 1</option>
+                  <option>Classroom 2</option>
+                     <option>Classroom 3</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4 text-slate-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </div>
+              </div>
+            </div>
+            <form class="mt-4">
+              <label class="block font-medium text-slate-900 mb-2">Assignment Title</label>
+              <input class="w-full rounded-md border-2 border-zinc-800 p-2 focus:outline-none focus:border-zinc-700 text-slate-900" type="text">
+              <label class="block font-medium text-slate-900 mt-4 mb-2">Assignment Description</label>
+              <textarea class="w-full rounded-md border-2 border-zinc-800 p-2 focus:outline-none focus:border-zinc-700 text-slate-900" rows="4"></textarea>
+              <label class="block font-medium text-slate-900 mt-4 mb-2">Include File</label>
+              
+              <input class="w-full rounded-md border-2 border-zinc-800 p-2 focus:outline-none focus:border-zinc-700 text-zinc-900" type="file">
+              <div class="mt-4 flex justify-end">
+                <button  class="bg-zinc-800 text-white rounded-lg py-2 px-4 hover:bg-zinc-900">Add assignment</button>
+              </div>
+            </form>
+        </div>
+        <app-dashboard-cards></app-dashboard-cards>
+        <div class="pb-20">
+            <app-dashboard-report></app-dashboard-report>
+            
+
+        </div>
+    </main>
+            
+</div>
+

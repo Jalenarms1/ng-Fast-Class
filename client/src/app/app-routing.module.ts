@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddAssignmentComponent } from './add-assignment/add-assignment.component';
 import { CreateClassComponent } from './create-class/create-class.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DemoPathComponent } from './demo-path/demo-path.component';
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'create-class', component: CreateClassComponent
+  },
+  {
+    path: 'create-assignment', component: AddAssignmentComponent
   }
 ];
 

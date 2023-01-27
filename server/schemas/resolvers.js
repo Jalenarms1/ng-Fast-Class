@@ -23,6 +23,20 @@ let resolvers = {
     testGet: () => {
       console.log('got')
       return {key: 'This is a test string'}
+    },
+    getMyClasses: async (_, args, ctx) => {
+      console.log(ctx);
+      try {
+        if(ctx.user) {
+          const myClasses = await Classroom.find({teacher: {_id: ctx.user._id}}).populate('teacher')
+          return myClasses
+
+        }
+        else return null;
+
+      } catch (error) {
+        console.log(error);
+      }
     }
     //for testing
     
@@ -117,7 +131,9 @@ let resolvers = {
           teacher: ctx.user._id
         })
 
-        return newClass.populate('teacher')
+        const myClasses = await Classroom.find({teacher: {_id: ctx.user._id}}).populate('teacher').populate('students')
+        console.log("myClasses", myClasses);
+        return myClasses
       } catch (error) {
         console.log(error);
         return error

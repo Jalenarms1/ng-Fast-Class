@@ -1,11 +1,11 @@
 <section class="">
-    <h2 class="text-xl font-medium ">Statistics</h2>
+    <h2 class="text-xl font-medium ">Actions</h2>
     <div class="flex py-6 gap-5">
         <button [ngClass]="{'border border-zinc-500': path === '/create-class'}" (click)="dirTo('create-class')" class="w-1/3 px-4 py-3 bg-zinc-900 rounded-lg text-center flex flex-col items-center text-white hover:shadow-sm hover:shadow-zinc-500 active:shadow-zinc-700 cursor-pointer">
             <img src="assets/images/create_icon.png" alt="create_icon" class="w-10">
             <p class="text-lg">Create new class</p>
         </button>
-        <button class="w-1/3 px-4 py-3 bg-zinc-900 rounded-lg text-center flex flex-col items-center text-white hover:shadow-sm hover:shadow-zinc-500 active:shadow-zinc-700 cursor-pointer">
+        <button [ngClass]="{'border border-zinc-500': path === '/create-assignment'}" (click)="dirTo('create-assignment')" class="w-1/3 px-4 py-3 bg-zinc-900 rounded-lg text-center flex flex-col items-center text-white hover:shadow-sm hover:shadow-zinc-500 active:shadow-zinc-700 cursor-pointer">
             <img src="assets/images/assignment_icon.png" alt="create_icon" class="w-10">
             <p class="text-lg">Add new assignment</p>
         </button>
